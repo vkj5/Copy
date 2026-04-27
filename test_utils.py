@@ -19,3 +19,7 @@ def test_negative_values():
 def test_invalid_type():
     with pytest.raises(TypeError):
         calculate_mpg("300", 10)
+
+# failing test
+def test_fail_demo():
+    assert calculate_mpg(100, 10) == 50  # intentionally incorrect
