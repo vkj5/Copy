@@ -15,10 +15,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install pytest
+        run: pip install -r requirements.txt
 
       - name: Lint
-        run: python -m py_compile main.py utils.py
+        run: python -m py_compile main.py utils.py trip_planner/*.py
 
       - name: Test
         run: pytest -v
