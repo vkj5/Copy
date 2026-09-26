@@ -11,3 +11,12 @@ def calculate_mpg(distance: float, fuel: float) -> float:
     return round(distance / fuel, 2)
 
 
+
+def celsius_to_fahrenheit(celsius: float) -> float:
+    if isinstance(celsius, bool) or not isinstance(celsius, (int, float)):
+        raise TypeError("Temperature must be a number.")
+
+    if celsius < -273.15:
+        raise ValueError("Temperature cannot be below absolute zero (-273.15 °C).")
+
+    return round(celsius * 9 / 5 + 32, 2)

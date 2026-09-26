@@ -18,7 +18,7 @@ jobs:
         run: pip install pytest
 
       - name: Lint
-        run: python -m py_compile main.py utils.py
+        run: python -m py_compile main.py utils.py temp_converter.py
 
       - name: Test
         run: pytest -v
